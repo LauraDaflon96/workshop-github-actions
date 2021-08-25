@@ -1,1 +1,1 @@
-# workshop-github-actions
+# Workshop Git Hub
