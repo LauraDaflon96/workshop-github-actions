@@ -11,6 +11,6 @@ jobs:
       with:
         action-token: ${{ secrets.PAT }}
         project-url: https://github.com/LauraDaflon96/workshop-github-actions/projects/1
-        column-name: "Awaiting Test"
+        column-name: "Awaiting test"
         label-name: "awaiting-test"
         columns-to-ignore: "Awaiting Test, Resolved"
