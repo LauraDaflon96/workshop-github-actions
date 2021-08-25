@@ -1,0 +1,17 @@
+name: Move to Awaiting test
+on:
+  release:
+      types: [published]
+     
+jobs:
+  move_cards:
+    runs-on: ubuntun-latest
+    steps:
+      - uses: apexskier/github-release-commenter@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
+          comment-template: |
+            Release {release_link} addresses this.
+          label-template: awaiting-test
+          skip-label: resolved
+    
