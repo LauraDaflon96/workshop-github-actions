@@ -1,16 +1,15 @@
-name: Move to Test Column
+name: Move to column
 on:
   issues:
     types: [labeled]
-
+    
 jobs:
   move_cards:
     runs-on: ubuntu-latest
     steps:
     - uses: konradpabjan/move-labeled-or-milestoned-issue@v2.0
       with:
-        action-token: ${{ secrets.ACCESS_TOKEN }}
-        project-url: ${{ secrets.CURRENT_PROJECT_URL }}
-        column-name: "Awaiting test"
-        label-name: "Awaiting-test"
-        columns-to-ignore: "Awaiting test, Resolved"
+        action-token: ${{ secrets.PAT }}
+        project-url: https://github.com/LauraDaflon96/workshop-github-actions/projects/1
+        column-name: "Awaiting Test"
+        label-name: "awaiting-test"
